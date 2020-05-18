@@ -6,7 +6,7 @@ FROM debian:buster-slim
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
 RUN apt-get update && \
-    apt-get install --no-install-recommends -y php-cli ssh rsync && \
+    apt-get install --no-install-recommends -y php-cli php-curl ssh rsync && \
     apt-get clean
 
 WORKDIR /app
